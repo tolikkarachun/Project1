@@ -1,0 +1,43 @@
+.container > div {
+  background: #eee;
+  padding: 50px;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  font-size: 48px;
+}
+
+html,
+body,
+.container {
+  height: 100%;
+}
+
+.container {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 200px 1fr 300px;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "header header header"
+    "menu content sidebar"
+    "footer footer footer";
+}
+
+.header {
+  grid-area: header;
+}
+.menu {
+  grid-area: menu;
+}
+.content {
+  grid-area: content;
+}
+.sidebar {
+  grid-area: sidebar;
+}
+.footer {
+  grid-area: footer;
+}
